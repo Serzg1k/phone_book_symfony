@@ -1,0 +1,11 @@
+sergey_phohe_phone:
+    resource: "@SergeyPhoheBundle/Controller/PhoneController.php"
+    type:     annotation
+
+sergey_phohe:
+    resource: "@SergeyPhoheBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

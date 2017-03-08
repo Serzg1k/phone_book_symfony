@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Phone</h1>
+
+    <table>
+        <tbody>
+            
+            <tr>
+                <th>Name</th>
+                <td>{{ phone.name }}</td>
+            </tr>
+            <tr>
+                <th>Syrname</th>
+                <td>{{ phone.syrname }}</td>
+            </tr>
+            <tr>
+                <th>Fathername</th>
+                <td>{{ phone.fathername }}</td>
+            </tr>
+            <tr>
+                <th>Phone №</th>
+                <td>{{ phone.phone }}</td>
+            </tr>
+            {% if phone.phone1 %}
+            <tr>
+                <th>Phone №</th>
+                <td>{{ phone.phone1 }}</td>
+            </tr>
+            {% endif %}
+            {% if phone.phone2 %}
+            <tr>
+                <th>Phone №</th>
+                <td>{{ phone.phone2 }}</td>
+            </tr>
+            {% endif %}
+            {% if phone.phone3 %}
+            <tr>
+                <th>Phone №</th>
+                <td>{{ phone.phone3 }}</td>
+            </tr>
+            {% endif %}
+            {% if phone.phone4 %}
+            <tr>
+                <th>Phone №</th>
+                <td>{{ phone.phone4 }}</td>
+            </tr>
+            {% endif %}
+            {% if phone.phone5 %}
+            <tr>
+                <th>Phone №</th>
+                <td>{{ phone.phone5 }}</td>
+            </tr>
+            {% endif %}
+            {% if phone.phone6 %}
+            <tr>
+                <th>Phone №</th>
+                <td>{{ phone.phone6 }}</td>
+            </tr>
+            {% endif %}
+            {% if phone.phone7 %}
+            <tr>
+                <th>Phone №</th>
+                <td>{{ phone.phone7 }}</td>
+            </tr>
+            {% endif %}
+            {% if phone.phone8 %}
+            <tr>
+                <th>Phone №</th>
+                <td>{{ phone.phone8 }}</td>
+            </tr>
+            {% endif %}
+            {% if phone.phone9 %}
+            <tr>
+                <th>Phone №</th>
+                <td>{{ phone.phone9 }}</td>
+            </tr>
+            {% endif %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('phone_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('phone_edit', { 'id': phone.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

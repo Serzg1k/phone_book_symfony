@@ -1,0 +1,99 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Phones</h1>
+ {% for phone in phones %}
+    <table>
+        <thead>
+            <tr>
+                
+                <th>Name</th>
+                <th>Syrname</th>
+                <th>Fathername</th>
+                <th>Phone 1 </th>
+                {% if phone.phone1 %}
+                <th>Phone 2 </th>
+                {% endif %}
+                {% if phone.phone2 %}
+                <th>Phone 3</th>
+                {% endif %}
+                {% if phone.phone3 %}
+                <th>Phone 4</th>
+                {% endif %}
+                {% if phone.phone4 %}
+                <th>Phone 5</th>
+                {% endif %}
+                {% if phone.phone5 %}
+                <th>Phone 6</th>
+                {% endif %}
+                {% if phone.phone6 %}
+                <th>Phone 7</th>
+                {% endif %}
+                {% if phone.phone7 %}
+                <th>Phone 8</th>
+                {% endif %}
+                {% if phone.phone8 %}
+                <th>Phone 9</th>
+                {% endif %}
+                {% if phone.phone9 %}
+                <th>Phone 10</th>
+                {% endif %}
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+       
+            <tr>
+                
+                <td>{{ phone.name }}</td>
+                <td>{{ phone.syrname }}</td>
+                <td>{{ phone.fathername }}</td>
+                <td>{{ phone.phone }}</td>
+                {% if phone.phone1 %}
+                <td>{{ phone.phone1 }}</td>
+                {% endif %}
+                {% if phone.phone2 %}
+                <td>{{ phone.phone2 }}</td>
+                {% endif %}
+                {% if phone.phone3 %}
+                <td>{{ phone.phone3 }}</td>
+                {% endif %}
+                {% if phone.phone4 %}
+                <td>{{ phone.phone4 }}</td>
+                {% endif %}
+                {% if phone.phone5 %}
+                <td>{{ phone.phone5 }}</td>
+                {% endif %}
+                {% if phone.phone6 %}
+                <td>{{ phone.phone6 }}</td>
+                {% endif %}
+                {% if phone.phone7 %}
+                <td>{{ phone.phone7 }}</td>
+                {% endif %}
+                {% if phone.phone8 %}
+                <td>{{ phone.phone8 }}</td>
+                {% endif %}
+                {% if phone.phone9 %}
+                <td>{{ phone.phone9 }}</td>
+                 {% endif %}   
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('phone_show', { 'id': phone.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('phone_edit', { 'id': phone.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('phone_new') }}">Create a new phone</a>
+        </li>
+    </ul>
+{% endblock %}

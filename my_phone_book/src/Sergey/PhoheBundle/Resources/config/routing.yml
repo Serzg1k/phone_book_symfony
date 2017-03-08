@@ -1,0 +1,3 @@
+sergey_phohe_homepage:
+    path:     /
+    defaults: { _controller: SergeyPhoheBundle:Default:index }
